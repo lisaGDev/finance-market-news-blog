@@ -1,0 +1,15 @@
+<!-- since this is a child class, there's no need for head -->
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+{% extends "layout.html" %}
+    {% block content %}
+    <h2>Here is a list of news articles</h4>
+    <div class="list-group">
+        {% for news_article in news_articles %}
+            <div class="media-body">
+                <a href={{news_article.url}} class="list-group-item list-group-item-action">{{news_article.name}}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
