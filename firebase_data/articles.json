@@ -1,0 +1,16 @@
+{
+    "articles": [
+        {
+            "name": "Is Climate Changing?", 
+            "url": "/climate"
+        }, 
+        {
+            "name": "There Is No Food", 
+            "url": "/crisis"
+        }, 
+        {
+            "name": "My Dog Missin", 
+            "url": "/dog"
+        }
+    ]
+}
