@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, redirect
 from firebase_data.data import get_data
 app = Flask(__name__)
 
-news_articles = get_data('/Users/lisagalva/Desktop/Python_Projects/finance-market-news-blog/firebase_data/articles.json')
+news_articles = get_data()
 
 @app.route('/default')
 def index():
@@ -32,10 +32,7 @@ def articles(article):
         return redirect(url_for('food_crisis'))
     if article == 'dog':
         return redirect(url_for('climate_change'))
-    # return "404 Article Not Found"
+    return "404 Article Not Found"
 
 if __name__ == '__main__':
-    # print(get_data())
-    # for news_article in get_data():
-    # print(news_articles)
     app.run()
