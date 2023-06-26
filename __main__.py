@@ -12,18 +12,6 @@ def index():
 def detail():
     return render_template("posts.html", news_articles=news_articles)
 
-@app.route('/my_dog_missin')
-def my_dog_missin():
-    return render_template("dog.html")
-
-@app.route('/food_crisis')
-def food_crisis():
-    return render_template("crisis.html")
-
-@app.route('/climate_change')
-def climate_change():
-    return render_template("climate.html")
-
 @app.route("/<string:post_id>", methods=['GET'])
 def show_article(post_id):
     return render_template(post_id + ".html")
